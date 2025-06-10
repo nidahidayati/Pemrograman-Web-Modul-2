@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 15px;
+  padding: 10px;
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.grid-item-1 { background-color: #f44336; }
+.grid-item-2 { background-color: #af9d4c; }
+.grid-item-3 { background-color: #6021f3; }
+.grid-item-4 { background-color: #ff3b58; }
+.grid-item-5 { background-color: #9C27B0; }
+.grid-item-6 { background-color: #ff990082; }
+
+.span-two-columns { grid-column: span 2; }
+</style>
+</head>
+<body>
+    <div class="grid-container">
+  <div class="grid-item grid-item-1">1</div>
+  <div class="grid-item grid-item-2">2</div>
+  <div class="grid-item grid-item-3">3</div>
+  <div class="grid-item grid-item-4">4</div>
+  <div class="grid-item grid-item-5">5</div>
+  <div class="grid-item grid-item-6 span-two-columns">6</div>
+</div>
+
+</body>
+</html>

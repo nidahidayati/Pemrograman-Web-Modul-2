@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout Latihan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+            transition: background-color 0.3s ease;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .grid-item {
+            background-color: #2196F3;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .responsive-text {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            font-size: 24px;
+            transition: font-size 0.3s ease;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: lightcoral;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .responsive-text {
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="responsive-text">
+        Ini adalah teks yang ukurannya berubah sesuai lebar layar.
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+</body>
+</html>
